@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: SignatureScanner
+  datasource:
+    url: jdbc:postgresql://localhost:5432/file_scan_db
+    username: ${DB_Username}
+    password: ${DB_Password}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+server:
+  port: 8080
